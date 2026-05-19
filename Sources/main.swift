@@ -75,6 +75,10 @@ render(shapes)
 // ============ 默认实现 ============
 protocol Describable {
     var name: String { get }
+    func describe()
+}
+
+extension Describable {
     func describe() {
         print("这是 \(name)")
     }
